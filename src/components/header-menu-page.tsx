@@ -90,13 +90,26 @@ const HeaderMenuPage = () => {
             transition={{ type: "spring", stiffness: 200, damping: 20 }}
             className="fixed inset-0 bg-black z-50 w-full h-screen flex flex-col items-center justify-center px-6"
           >
-            <button
-              className=" bg-amber-300 w-full my-2 text-black font-bold flex flex-row justify-center items-center"
-              onClick={closeMenu}
-            >
-              <span>Close</span>
-            </button>
-
+            <div className="grid grid-cols-12 w-full gap-2 mb-2">
+              <Button
+                asChild
+                className="col-span-5 bg-amber-300 text-black font-bold flex flex-row justify-center items-center"
+              >
+                <Link href={`/`}>Home</Link>
+              </Button>
+              <Button
+                asChild
+                className="col-span-5 bg-amber-300 text-black font-bold flex flex-row justify-center items-center"
+              >
+                <Link href={`/menu`}>Menu</Link>
+              </Button>
+              <Button
+                className="col-span-2 bg-amber-300 text-black font-bold flex flex-row justify-center items-center"
+                onClick={closeMenu}
+              >
+                <X size={24} />
+              </Button>
+            </div>
             <nav className="flex flex-col gap-4 w-full max-w-xs">
               {Object.keys(menu).map((key) => (
                 <motion.div

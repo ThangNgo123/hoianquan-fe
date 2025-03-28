@@ -25,7 +25,7 @@ const About = () => {
               quintessence of Vietnamese culinary culture.
             </p>
           </div>
-          <div className="md:w-1/2 relative h-[400px] rounded-lg overflow-hidden">
+          <div className="w-full md:w-1/2 relative h-[400px] rounded-lg overflow-hidden">
             <Image
               src="/about-image.jpg"
               alt="Vietnamese Pho"

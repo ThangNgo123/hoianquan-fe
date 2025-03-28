@@ -104,51 +104,6 @@ export const menu = {
         },
       ],
     },
-    {
-      title: "Sweet and Sour Sauce",
-      description:
-        "Stir fried with sweet pepper, onion, tomato, served with steamed rice",
-      options: [
-        { type: "A", title: "Chicken", price: 12.95 },
-        { type: "B", title: "Chicken katsu", price: 13.95 },
-        { type: "C", title: "Prawn", price: 14.95 },
-        { type: "D", title: "Fried duck", price: 14.95 },
-        { type: "E", title: "Salmon katsu", price: 13.95 },
-        { type: "F", title: "Fried tuna", price: 14.95 },
-        { type: "G", title: "Fried tofu", price: 10.45 },
-        { type: "H", title: "Vegetable", price: 10.45 },
-      ],
-    },
-    {
-      title: "Wok Egg Fried Rice",
-      description:
-        "Stir fried with carrot, peas, crispy fried onions, spring onion",
-      options: [
-        { type: "A", title: "Chicken", price: 9.95 },
-        { type: "B", title: "Chicken katsu", price: 10.45 },
-        { type: "C", title: "Prawn", price: 11.45 },
-        { type: "D", title: "Fried duck", price: 13.95 },
-        { type: "E", title: "Vegetable", price: 8.95 },
-      ],
-    },
-    {
-      title: "Vietnamese Banh Mi",
-      description: "",
-      options: [
-        {
-          type: "A",
-          title:
-            "BBQ pork banh mi (bbq pork, coriander, pickles, carrots, homemade sauce)",
-          price: 7.0,
-        },
-        {
-          type: "B",
-          title:
-            "Char siu banh mi (char siu, coriander, pickles, carrots, chicken liver pate, homemade sauce)",
-          price: 7.0,
-        },
-      ],
-    },
   ],
   vietnameseNoodleSoup: [
     {
@@ -272,6 +227,51 @@ export const menu = {
         { type: "H", title: "Vegetable", price: 10.45 },
       ],
     },
+    {
+      title: "Sweet and Sour Sauce",
+      description:
+        "Stir fried with sweet pepper, onion, tomato, served with steamed rice",
+      options: [
+        { type: "A", title: "Chicken", price: 12.95 },
+        { type: "B", title: "Chicken katsu", price: 13.95 },
+        { type: "C", title: "Prawn", price: 14.95 },
+        { type: "D", title: "Fried duck", price: 14.95 },
+        { type: "E", title: "Salmon katsu", price: 13.95 },
+        { type: "F", title: "Fried tuna", price: 14.95 },
+        { type: "G", title: "Fried tofu", price: 10.45 },
+        { type: "H", title: "Vegetable", price: 10.45 },
+      ],
+    },
+    {
+      title: "Wok Egg Fried Rice",
+      description:
+        "Stir fried with carrot, peas, crispy fried onions, spring onion",
+      options: [
+        { type: "A", title: "Chicken", price: 9.95 },
+        { type: "B", title: "Chicken katsu", price: 10.45 },
+        { type: "C", title: "Prawn", price: 11.45 },
+        { type: "D", title: "Fried duck", price: 13.95 },
+        { type: "E", title: "Vegetable", price: 8.95 },
+      ],
+    },
+    {
+      title: "Vietnamese Banh Mi",
+      description: "",
+      options: [
+        {
+          type: "A",
+          title:
+            "BBQ pork banh mi (bbq pork, coriander, pickles, carrots, homemade sauce)",
+          price: 7.0,
+        },
+        {
+          type: "B",
+          title:
+            "Char siu banh mi (char siu, coriander, pickles, carrots, chicken liver pate, homemade sauce)",
+          price: 7.0,
+        },
+      ],
+    },
   ],
   sushi: [
     {
@@ -322,7 +322,7 @@ export const menu = {
         { type: "n12", title: "Inari", price: 2.95 },
         { type: "n13", title: "Tamago", price: 2.95 },
         { type: "n14", title: "Cucumber", price: 2.45 },
-        { type: "n15", title: "Salmon mayo spicy, hành lá", price: 2.95 },
+        { type: "n15", title: "Salmon mayo spicy", price: 2.95 },
       ],
     },
     {
@@ -582,6 +582,13 @@ export const menu = {
         { type: "b8", title: "Eel", price: 14.95 },
         { type: "b9", title: "Inari", price: 9.95 },
         { type: "b10", title: "Vegetable", price: 9.95 },
+      ],
+    },
+    {
+      title: "Extra Toppings",
+      options: [
+        { type: "1", title: "Any sauce extra", price: 0 },
+        { type: "2", title: "Steamed rice, chips, slice of toast", price: 2.5 },
       ],
     },
   ],

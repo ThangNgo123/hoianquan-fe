@@ -11,7 +11,7 @@ import { title } from "process";
 const imagesStarters = [
   { title: "Fried Shrimp Green Rice Crispy", source: "/gallery-1.webp" },
   { title: "Pho bo", source: "/gallery-2.webp" },
-  { title: "Com rang", source: "/gallery-3.webp" },
+  { title: "Sushi Bowl", source: "/gallery-3.webp" },
 ];
 
 const MenuPage = () => {
