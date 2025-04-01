@@ -53,7 +53,7 @@ const HeaderMenuPage = () => {
                 isScrolled ? "text-base md:text-lg" : ""
               }`}
             >
-              <Link href={`/`}>Hoianquan</Link>
+              <Link href={`/`}>Hoi an quan</Link>
             </div>
           </div>
 

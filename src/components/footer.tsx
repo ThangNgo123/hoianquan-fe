@@ -15,7 +15,7 @@ const Footer = () => {
               height={55}
               className="mr-2"
             />
-            <h2 className="text-xl font-bold text-amber-300">Hoianquan</h2>
+            <h2 className="text-xl font-bold text-amber-300">Hoi an quan</h2>
           </div>
           <div className="flex gap-4">
             <Link href="#" className="text-amber-300 hover:text-amber-100">

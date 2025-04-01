@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hoianquan | Authentic Vietnamese Cuisine in Stirling, UK",
+  title: "Hoi an quan | Authentic Vietnamese Cuisine in Stirling, UK",
   description:
     "Discover the authentic flavors of Vietnam at Hoi An Quan. Located at 34 Murray Pl, Stirling FK8 2DD, we offer traditional Vietnamese dishes that transport you to the heart of Hoi An.",
   metadataBase: new URL("https://www.hoianquan.co.uk"), // Replace with actual website URL
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Hoianquan - Authentic Vietnamese Restaurant in Stirling",
+    title: "Hoi an quan - Authentic Vietnamese Restaurant in Stirling",
     description:
       "Experience the quintessence of Vietnamese culinary tradition at our restaurant in the heart of Stirling. Traditional flavors, warm hospitality.",
     images: [
@@ -31,14 +31,14 @@ export const metadata: Metadata = {
         url: "https://res.cloudinary.com/dj1u21rta/image/upload/v1743154562/Screenshot_2025-03-28_163444_az0uod.png",
         width: 1200,
         height: 630,
-        alt: "Hoianquan - Vietnamese Restaurant Interior",
+        alt: "Hoi an quan - Vietnamese Restaurant Interior",
       },
     ],
-    siteName: "Hoianquan",
+    siteName: "Hoi an quan",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hoianquan | Vietnamese Cuisine in Stirling",
+    title: "Hoi an quan | Vietnamese Cuisine in Stirling",
     description:
       "Traditional Vietnamese dining at 34 Murray Pl. Authentic flavors, warm atmosphere.",
     images: [
@@ -46,21 +46,23 @@ export const metadata: Metadata = {
     ],
   },
   keywords: [
-    "Vietnamese restaurant Stirling",
-    "Vietnamese restaurant",
-    "Vietnamese cuisine Stirling",
-    "Vietnamese cuisine",
-    "Vietnamese cuisine UK",
-    "Vietnamese food Stirling",
-    "Vietnamese food",
-    "Vietnamese food Stirling",
-    "Vietnamese food UK",
-    "Vietnam food",
+    "vietnamese restaurant Stirling",
+    "vietnamese restaurant",
+    "vietnamese cuisine Stirling",
+    "vietnamese cuisine",
+    "vietnamese cuisine UK",
+    "vietnamese food Stirling",
+    "vietnamese food",
+    "vietnamese food Stirling",
+    "vietnamese food UK",
+    "vietnam food",
     "Hoianquan",
-    "Vietnamese cuisine UK",
-    "Traditional Vietnamese food",
-    "Stirling dining",
-    "Asian restaurant Scotland",
+    "Hoi an quan",
+    "hoi an quan",
+    "vietnamese cuisine UK",
+    "traditional Vietnamese food",
+    "stirling dining",
+    "asian restaurant Scotland",
   ],
   verification: {
     google: "your-google-site-verification-code", // Replace with actual verification code

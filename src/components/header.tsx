@@ -49,7 +49,7 @@ const Header = () => {
                 isScrolled ? "text-xl md:text-2xl" : ""
               }`}
             >
-              Hoianquan
+              Hoi an quan
             </h1>
           </div>
 
