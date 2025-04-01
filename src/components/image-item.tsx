@@ -28,6 +28,12 @@ const MenuItemImageModal = ({ option }: Props) => {
   const optionSourceLeangth = option.options.filter(
     (i) => i.source !== ""
   ).length;
+  const optionFilter = option.options
+    .filter((i) => i.source !== "")
+    .map((o) => ({
+      ...o,
+      image: `https://d13e9bff825cyt.cloudfront.net${o.source}`,
+    }));
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
@@ -58,28 +64,26 @@ const MenuItemImageModal = ({ option }: Props) => {
                 : "grid-cols-1 md:grid-cols-2"
             )}
           >
-            {option.options
-              .filter((i) => i.source !== "")
-              .map((item, index) => (
-                <div key={index}>
-                  <Image
-                    className={cn(
-                      "object-cover rounded-t-lg",
-                      optionSourceLeangth === 1 && "w-full"
-                    )}
-                    width={320}
-                    height={320}
-                    src={item.source}
-                    alt={item.title}
-                  ></Image>
-                  <p className="flex items-center justify-between mb-3 md:mb-2 rounded-b-lg bg-amber-300 text-black p-2 text-xs font-semibold">
-                    <span>
-                      {item.type}. {item.title}: <span>£</span>
-                      {item.price}
-                    </span>
-                  </p>
-                </div>
-              ))}
+            {optionFilter.map((item, index) => (
+              <div key={index}>
+                <Image
+                  className={cn(
+                    "object-cover rounded-t-lg",
+                    optionSourceLeangth === 1 && "w-full"
+                  )}
+                  width={320}
+                  height={320}
+                  src={item.image}
+                  alt={item.title}
+                ></Image>
+                <p className="flex items-center justify-between mb-3 md:mb-2 rounded-b-lg bg-amber-300 text-black p-2 text-xs font-semibold">
+                  <span>
+                    {item.type}. {item.title}: <span>£</span>
+                    {item.price}
+                  </span>
+                </p>
+              </div>
+            ))}
             {option.options.filter((i) => i.source !== "").length === 0 && (
               <>Comming soon.</>
             )}
