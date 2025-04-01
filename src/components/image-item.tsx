@@ -10,6 +10,7 @@ import { ImageIcon, X } from "lucide-react";
 import Image from "next/image";
 import { DialogTitle } from "@radix-ui/react-dialog";
 import { ScrollArea } from "./ui/scroll-area";
+import { cn } from "@/lib/utils";
 interface optionDish {
   title: string;
   source: string;
@@ -24,7 +25,9 @@ type Props = {
 };
 const MenuItemImageModal = ({ option }: Props) => {
   const [open, setOpen] = useState(false);
-
+  const optionSourceLeangth = option.options.filter(
+    (i) => i.source !== ""
+  ).length;
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
@@ -47,13 +50,23 @@ const MenuItemImageModal = ({ option }: Props) => {
           </DialogTitle>
         </DialogHeader>
         <ScrollArea className="md:max-h-[27rem] max-h-[26rem]">
-          <div className="grid md:grid-cols-2 grid-cols-1 gap-2 text-white md:max-h-450px">
+          <div
+            className={cn(
+              "grid gap-2 text-white",
+              optionSourceLeangth === 1
+                ? "grid-cols-1"
+                : "grid-cols-1 md:grid-cols-2"
+            )}
+          >
             {option.options
               .filter((i) => i.source !== "")
               .map((item, index) => (
                 <div key={index}>
                   <Image
-                    className="object-cover rounded-t-lg"
+                    className={cn(
+                      "object-cover rounded-t-lg",
+                      optionSourceLeangth === 1 && "w-full"
+                    )}
                     width={300}
                     height={300}
                     src={item.source}
