@@ -67,8 +67,8 @@ const MenuItemImageModal = ({ option }: Props) => {
                       "object-cover rounded-t-lg",
                       optionSourceLeangth === 1 && "w-full"
                     )}
-                    width={300}
-                    height={300}
+                    width={320}
+                    height={320}
                     src={item.source}
                     alt={item.title}
                   ></Image>
