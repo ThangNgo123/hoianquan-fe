@@ -1,12 +1,12 @@
 "use client";
 import HeaderMenuPage from "@/components/header-menu-page";
 import { menu } from "@/constant";
-import { ChevronUp, Plus, X } from "lucide-react";
+import { ChevronUp, ImageIcon, Plus, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { title } from "process";
+import MenuItemImageModal from "@/components/image-item";
 
 const imagesStarters = [
   { title: "Fried Shrimp Green Rice Crispy", source: "/gallery-1.webp" },
@@ -95,7 +95,7 @@ const MenuPage = () => {
                 <div className="md:text-5xl text-3xl font-bold mb-2 md:ml-5">
                   {title}
                 </div>
-                <div className="grid grid-cols-1 md:w-full w-[16rem] mx-auto md:grid-cols-4 gap-6 my-4">
+                {/* <div className="grid grid-cols-1 md:w-full w-[16rem] mx-auto md:grid-cols-4 gap-6 my-4">
                   {title === "Starters & Sides" &&
                     imagesStarters.map((image, index) => (
                       <div
@@ -116,7 +116,7 @@ const MenuPage = () => {
                         </div>
                       </div>
                     ))}
-                </div>
+                </div> */}
                 <div className=" grid grid-cols-1 md:grid-cols-2 gap-5">
                   {menu[key as keyof typeof menu].map((item, index) => (
                     <div
@@ -124,9 +124,19 @@ const MenuPage = () => {
                       key={index}
                       className="bg-amber-950/30 p-6 rounded-lg "
                     >
-                      <h3 className="text-xl font-bold text-amber-300">
-                        {item.title}
-                      </h3>
+                      <div className="grid grid-cols-12 gap-4 items-center justify-center">
+                        <div className="col-span-11 text-xl font-bold text-amber-300">
+                          {item.title}
+                        </div>
+                        <div className="col-span-1 justify-center">
+                          <MenuItemImageModal
+                            option={{
+                              title: item.title,
+                              options: item.options,
+                            }}
+                          />
+                        </div>
+                      </div>
                       <p className="text-sm mb-4">{item.description}</p>
                       {item.options.length > 2
                         ? item.options.map((option, index) => {
