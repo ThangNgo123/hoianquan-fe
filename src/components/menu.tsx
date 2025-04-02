@@ -62,7 +62,7 @@ const Menu = () => {
                 return (
                   <div key={index} className="bg-amber-950/30 p-6 rounded-lg">
                     <h3 className="text-xl font-bold text-amber-300 mb-2">
-                      {item.title}
+                      {item.type}. {item.title}
                     </h3>
                     <p className="text-sm mb-4">{item.description}</p>
                     {item.options.map((option, index) => {
@@ -100,7 +100,7 @@ const Menu = () => {
                 return (
                   <div key={index} className="bg-amber-950/30 p-6 rounded-lg">
                     <h3 className="text-xl font-bold text-amber-300 mb-2">
-                      {item.title}
+                      {item.type}. {item.title}
                     </h3>
                     <p className="text-sm mb-4">{item.description}</p>
                     {item.options.map((option, index) => {
@@ -138,7 +138,7 @@ const Menu = () => {
                 return (
                   <div key={index} className="bg-amber-950/30 p-6 rounded-lg">
                     <h3 className="text-xl font-bold text-amber-300 mb-2">
-                      {item.title}
+                      {item.type}. {item.title}
                     </h3>
                     <p className="text-sm mb-4">{item.description}</p>
                     {item.options.map((option, index) => {
@@ -176,7 +176,7 @@ const Menu = () => {
                 return (
                   <div key={index} className="bg-amber-950/30 p-6 rounded-lg">
                     <h3 className="text-xl font-bold text-amber-300 mb-2">
-                      {item.title}
+                      {item.type}. {item.title}
                     </h3>
                     <p className="text-sm mb-4">{item.description}</p>
                     {item.options.map((option, index) => {
@@ -214,7 +214,7 @@ const Menu = () => {
                 return (
                   <div key={index} className="bg-amber-950/30 p-6 rounded-lg">
                     <h3 className="text-xl font-bold text-amber-300 mb-2">
-                      {item.title}
+                      {item.type}. {item.title}
                     </h3>
                     <p className="text-sm mb-4">{item.description}</p>
                     {item.options.map((option, index) => {

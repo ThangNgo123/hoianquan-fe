@@ -126,7 +126,7 @@ const MenuPage = () => {
                     >
                       <div className="grid grid-cols-12 gap-4 items-center justify-center">
                         <div className="col-span-11 text-xl font-bold text-amber-300">
-                          {item.title}
+                          {item.type}. {item.title}
                         </div>
                         <div className="col-span-1 justify-center">
                           <MenuItemImageModal
@@ -138,7 +138,7 @@ const MenuPage = () => {
                         </div>
                       </div>
                       <p className="text-sm mb-4">{item.description}</p>
-                      {item.options.length > 2
+                      {item.options.length > 1
                         ? item.options.map((option, index) => {
                             return (
                               <div key={index} className="flex justify-between">
