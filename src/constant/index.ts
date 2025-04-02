@@ -1,6 +1,7 @@
 export const menu = {
   startersAndSides: [
     {
+      type: "1",
       title: "Salad",
       description:
         "Mix salad, mango, cherry tomatoes, sesame seeds, served with homemade sauce",
@@ -12,6 +13,7 @@ export const menu = {
       ],
     },
     {
+      type: "2",
       title: "Vietnamese Fresh Spring Rolls | Goi Cuon (2pc)",
       description:
         "Fresh rice paper rolls with coriander, lettuce, vermicelli, cucumber, choice of fish sauce or hoisin sauce",
@@ -23,6 +25,7 @@ export const menu = {
       ],
     },
     {
+      type: "3",
       title: "Crispy Spring Roll | Cha Nem Viet Nam (2pc)",
       description:
         "Served with lettuce & herbs to wrap & dip and pork homemade fish sauce",
@@ -31,11 +34,13 @@ export const menu = {
       ],
     },
     {
+      type: "4",
       title: "Fried Shrimp - Crispy (5pc)",
       description: "Served with sweet & sour sauce",
       options: [{ type: "A", title: "Fried Shrimp", price: 7.45, source: "" }],
     },
     {
+      type: "5",
       title: "Fried Shrimp Green Rice Crispy (5pc)",
       description: "Served with sweet & sour sauce",
       options: [
@@ -48,6 +53,7 @@ export const menu = {
       ],
     },
     {
+      type: "6",
       title: "Seaweeds & Avocado, Sesame Seeds",
       description: "",
       options: [
@@ -55,11 +61,13 @@ export const menu = {
       ],
     },
     {
+      type: "7",
       title: "Edamame * Japanese Soybean",
       description: "",
       options: [{ type: "A", title: "Edamame", price: 4.95, source: "" }],
     },
     {
+      type: "8",
       title: "Pumpkin Croquette (2pc)",
       description:
         "Mashed pumpkin coated in crispy bread crumbs with mayo & unagi sauce",
@@ -68,12 +76,14 @@ export const menu = {
       ],
     },
     {
+      type: "9",
       title: "Takoyaki (5pc)",
       description:
         "Served with mayo, unagi sauce & katsuohushi and spring onion",
       options: [{ type: "A", title: "Takoyaki", price: 5.95, source: "" }],
     },
     {
+      type: "10",
       title: "Grilled Gyoza Dumplings (5pc)",
       description: "Served with unagi sauce",
       options: [
@@ -83,6 +93,7 @@ export const menu = {
       ],
     },
     {
+      type: "11",
       title: "Soup",
       description: "Corn, carrot, mushroom, spring onion, egg",
       options: [
@@ -114,6 +125,7 @@ export const menu = {
       ],
     },
     {
+      type: "12",
       title: "Chips",
       description: "",
       options: [
@@ -129,6 +141,7 @@ export const menu = {
   ],
   vietnameseNoodleSoup: [
     {
+      type: "13",
       title: "Pho",
       description:
         "Associated with the rice civilization and existing for hundreds of years, Vietnamese pho has followed Vietnamese people to all five continents and is loved by friends all over the world. Although today pho has developed and has many variations, the secret to having a bowl of 'family-style' pho with a rich ancient flavor is still a story with many interesting and meaningful things. 'The path of pho' is also the path to preserving and promoting the quintessence of Vietnamese culinary culture.",
@@ -159,6 +172,7 @@ export const menu = {
       ],
     },
     {
+      type: "14",
       title: "Mixed Pho | Pho Tron",
       description:
         "Mixed pho is a classic Vietnamese pho variety. This type of pho is dry, meaning that it doesn't contain broth—instead, it's a salad with meat (beef, chicken, or prawns) and noodles. The dish is typical of Hanoi and it's especially popular during summer. Served with homemade black pepper sauce.",
@@ -174,6 +188,7 @@ export const menu = {
       ],
     },
     {
+      type: "15",
       title: "Rice Noodle or Udon Noodle - Mango Sauce",
       description:
         "Stir fried with broccoli, cauliflower, carrot, pepper, spring onion",
@@ -185,6 +200,7 @@ export const menu = {
       ],
     },
     {
+      type: "16",
       title: "Rice Noodle or Udon Noodle - Thai Curry Sauce",
       description:
         "Stir fried with broccoli, cauliflower, carrot, sweet pepper, spring onion, mushroom",
@@ -196,6 +212,7 @@ export const menu = {
       ],
     },
     {
+      type: "17",
       title: "Bun Bo Nam Bo (Spicy)",
       description:
         "Beef marinated with lemongrass on rice noodle salad and a spicy dip made from homemade fish sauce and lime. Refined with roasted onions, peanuts, and mint, lettuce, coriander.",
@@ -204,12 +221,14 @@ export const menu = {
       ],
     },
     {
+      type: "18",
       title: "Bun Nem Ran",
       description:
         "Rice noodles with spring rolls, fresh lettuce, carrots, coriander, refined, crispy fried shallots with fish sauce and peanuts.",
       options: [{ type: "A", title: "Bun Nem Ran", price: 12.95, source: "" }],
     },
     {
+      type: "19",
       title: "Bun Thit Nuong Obama | Grilled Pork and Rice Vermicelli",
       description:
         "Served with grilled pork, rice vermicelli noodles, and fresh leafy green vegetables and lettuce and homemade fish sauce.",
@@ -223,6 +242,7 @@ export const menu = {
       ],
     },
     {
+      type: "20",
       title: "Ramen Fried Noodles",
       description:
         "Stir fried with onion, sweet pepper, spring onion, crispy fried shallots, bean sprouts, served with steamed rice.",
@@ -251,6 +271,7 @@ export const menu = {
       ],
     },
     {
+      type: "21",
       title: "Thai Curry (Mildly Spicy)",
       description:
         "Cook with sweet pepper, broccoli, mushroom, zucchini, onion, served with steamed rice.",
@@ -264,6 +285,7 @@ export const menu = {
       ],
     },
     {
+      type: "22",
       title: "Mango Sauce",
       description:
         "Stir fried with broccoli, cauliflower, courgette, carrot, pepper, mushroom, onion, served with steamed rice.",
@@ -279,6 +301,7 @@ export const menu = {
       ],
     },
     {
+      type: "23",
       title: "Black Pepper Sauce",
       description:
         "Stir fried with broccoli, cauliflower, courgette, carrot, pepper, mushroom, onion, spring onion, sesame seeds, served with steamed rice.",
@@ -294,6 +317,7 @@ export const menu = {
       ],
     },
     {
+      type: "24",
       title: "Sweet and Sour Sauce",
       description:
         "Stir fried with sweet pepper, onion, tomato, served with steamed rice",
@@ -314,6 +338,7 @@ export const menu = {
       ],
     },
     {
+      type: "25",
       title: "Wok Egg Fried Rice",
       description:
         "Stir fried with carrot, peas, crispy fried onions, spring onion",
@@ -331,6 +356,7 @@ export const menu = {
       ],
     },
     {
+      type: "26",
       title: "Vietnamese Banh Mi",
       description: "",
       options: [
@@ -353,6 +379,7 @@ export const menu = {
   ],
   sushi: [
     {
+      type: "28",
       title: "Starter",
       description:
         "Avocado, spring onion, seaweed, sesame, ginger, wasabi homemade sauce",
@@ -363,6 +390,7 @@ export const menu = {
       ],
     },
     {
+      type: "29",
       title: "Sashimi (6pc)",
       description: "",
       options: [
@@ -390,6 +418,7 @@ export const menu = {
       ],
     },
     {
+      type: "30",
       title: "Nigiri (2pc)",
       description: "",
       options: [
@@ -411,6 +440,7 @@ export const menu = {
       ],
     },
     {
+      type: "31",
       title: "Maki (8pc)",
       description: "",
       options: [
@@ -434,6 +464,7 @@ export const menu = {
       ],
     },
     {
+      type: "32",
       title: "Inside Out (8pc)",
       description: "",
       options: [
@@ -497,6 +528,7 @@ export const menu = {
       ],
     },
     {
+      type: "33",
       title: "Futo (10pc)",
       description: "",
       options: [
@@ -538,6 +570,7 @@ export const menu = {
       ],
     },
     {
+      type: "34",
       title: "Special Full Roll",
       description: "",
       options: [
@@ -628,6 +661,7 @@ export const menu = {
       ],
     },
     {
+      type: "35",
       title: "Shijimie Full Roll (10pc)",
       description:
         "Avocado, cucumber, mango, philadelphia, sesame, sauce unagi, cocktail",
@@ -647,6 +681,7 @@ export const menu = {
       ],
     },
     {
+      type: "36",
       title: "Sushi Set",
       description: "",
       options: [
@@ -700,6 +735,7 @@ export const menu = {
       ],
     },
     {
+      type: "27",
       title: "Bowl Sushi",
       description:
         "Mix salad, cucumber, avocado, sweet ginger, wasabi, sweet corn, cherry tomato, mango, seaweed, sesame and unagi, handmade caktil, kikkoman",
@@ -731,11 +767,13 @@ export const menu = {
   ],
   desserts: [
     {
+      type: "1",
       title: "Icecream",
       description: "Vanilla / chocolate 2 scoops",
       options: [{ type: "A", title: "Icecream", price: 3.0, source: "" }],
     },
     {
+      type: "2",
       title: "Piece of Cake",
       description: "Vanilla cake / chocolate cake of cake box shop",
       options: [{ type: "A", title: "Piece of Cake", price: 5.0, source: "" }],
@@ -743,6 +781,7 @@ export const menu = {
   ],
   drinks: [
     {
+      type: "1",
       title: "Water and Soft Drinks",
       description: "",
       options: [
@@ -770,6 +809,7 @@ export const menu = {
       ],
     },
     {
+      type: "2",
       title: "Fruit Juice",
       description: "",
       options: [
@@ -779,6 +819,7 @@ export const menu = {
       ],
     },
     {
+      type: "3",
       title: "Vietnamese Coffee",
       description: "Authentic Vietnamese coffee",
       options: [
@@ -805,6 +846,7 @@ export const menu = {
       ],
     },
     {
+      type: "4",
       title: "Hot Tea",
       description: "",
       options: [
@@ -829,6 +871,7 @@ export const menu = {
       ],
     },
     {
+      type: "5",
       title: "Fresh Homemade Cold Drink",
       description: "",
       options: [
