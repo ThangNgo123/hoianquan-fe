@@ -42,10 +42,9 @@ const MenuPage = () => {
             <h2 className="text-sm font-semibold">Filter by:</h2>
             {[
               { title: "Starters & Sides", key: "startersAndSides" },
-              { title: "Vietnamese Noodle Soup", key: "vietnameseNoodleSoup" },
+              { title: "Mains", key: "mains" },
               { title: "Sushi", key: "sushi" },
               { title: "Desserts", key: "desserts" },
-              { title: "Drinks", key: "drinks" },
             ].map(({ title, key }) => (
               <div key={key}>
                 <div className="flex justify-between items-center">
@@ -70,7 +69,7 @@ const MenuPage = () => {
                     {menu[key as keyof typeof menu].map((item, index) => (
                       <Link
                         className="cursor-pointer hover:text-amber-100"
-                        href={`/menu/#${item.title}`}
+                        href={`#${encodeURIComponent(item.title)}`}
                         key={index}
                       >
                         <li className="text-sm">- {item.title}</li>
@@ -86,10 +85,9 @@ const MenuPage = () => {
           <div className="p-5">
             {[
               { title: "Starters & Sides", key: "startersAndSides" },
-              { title: "Vietnamese Noodle Soup", key: "vietnameseNoodleSoup" },
+              { title: "Mains", key: "mains" },
               { title: "Sushi", key: "sushi" },
               { title: "Desserts", key: "desserts" },
-              { title: "Drinks", key: "drinks" },
             ].map(({ title, key }) => (
               <div className="mb-10" key={key}>
                 <div className="md:text-5xl text-3xl font-bold mb-2 md:ml-5">
@@ -132,37 +130,116 @@ const MenuPage = () => {
                           <MenuItemImageModal
                             option={{
                               title: item.title,
-                              options: item.options,
+                              options:
+                                "options" in item ? item.options || [] : [],
+                              description: item.description || "",
                             }}
                           />
                         </div>
                       </div>
-                      <p className="text-sm mb-4">{item.description}</p>
-                      {item.options.length > 1
-                        ? item.options.map((option, index) => {
+                      <p className="text-sm mb-4">{item.description || ""}</p>
+                      {/* Check if item has options array or is a simple item with price */}
+                      {"options" in item && item.options ? (
+                        // Handle items with options array
+                        <>
+                          {item.options.map((option, index) => {
+                            // Handle nested options structure
+                            if (
+                              "options" in option &&
+                              option.options &&
+                              option.options.length > 0
+                            ) {
+                              return (
+                                <div key={index} className="mb-4">
+                                  <div className="font-semibold">
+                                    {option.type}. {option.title}
+                                  </div>
+                                  {"description" in option &&
+                                    option.description && (
+                                      <p className="text-sm text-orange-300 mb-2">
+                                        {option.description}
+                                      </p>
+                                    )}
+                                  {option.options.map(
+                                    (nestedOption, nestedIndex) => (
+                                      <div
+                                        key={nestedIndex}
+                                        className="flex justify-between ml-4 mb-1"
+                                      >
+                                        <span>
+                                          {nestedOption.type}.{" "}
+                                          {nestedOption.title}
+                                        </span>
+                                        <span className="text-amber-300">
+                                          <span>£</span>
+                                          {nestedOption.price}
+                                        </span>
+                                      </div>
+                                    )
+                                  )}
+                                </div>
+                              );
+                            }
+                            // Handle simple options with individual prices
+                            if (
+                              "price" in option &&
+                              option.price !== undefined
+                            ) {
+                              return (
+                                <div key={index} className="mb-2">
+                                  <div className="flex justify-between">
+                                    <span>
+                                      {item.options && item.options.length > 1
+                                        ? `${option.type}. `
+                                        : ""}
+                                      {option.title}
+                                    </span>
+                                    <span className="text-amber-300">
+                                      <span>£</span>
+                                      {option.price}
+                                    </span>
+                                  </div>
+                                  {"description" in option &&
+                                    option.description && (
+                                      <p className="text-sm text-orange-300 ml-4">
+                                        {option.description}
+                                      </p>
+                                    )}
+                                </div>
+                              );
+                            }
+                            // Handle combo items - options without individual prices
                             return (
-                              <div key={index} className="flex justify-between">
-                                <span>
-                                  {option.type}. {option.title}
-                                </span>
-                                <span className="text-amber-300">
-                                  <span>£</span>
-                                  {option.price}
-                                </span>
-                              </div>
-                            );
-                          })
-                        : item.options.map((option, index) => {
-                            return (
-                              <div key={index} className="flex justify-between">
-                                <span>{option.title}</span>
-                                <span className="text-amber-300">
-                                  <span>£</span>
-                                  {option.price}
+                              <div key={index} className="mb-1">
+                                <span className="text-orange-300">
+                                  • {option.title}
                                 </span>
                               </div>
                             );
                           })}
+                          {/* Show total price for combo items */}
+                          {"price" in item && (
+                            <div className="flex justify-between mt-3 pt-2 border-t border-amber-300/30">
+                              <span className="font-semibold">
+                                Total Price:
+                              </span>
+                              <span className="text-amber-300 font-semibold">
+                                <span>£</span>
+                                {item.price as number}
+                              </span>
+                            </div>
+                          )}
+                        </>
+                      ) : (
+                        // Handle simple items with direct price (legacy structure)
+                        <div className="flex justify-between">
+                          <span>{item.title}</span>
+                          <span className="text-amber-300">
+                            <span>£</span>
+                            {"price" in item ? (item.price as number) : 0}
+                          </span>
+                        </div>
+                      )}
                     </div>
                   ))}
                 </div>

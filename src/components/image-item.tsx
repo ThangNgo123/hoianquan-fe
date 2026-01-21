@@ -13,23 +13,26 @@ import { ScrollArea } from "./ui/scroll-area";
 import { cn } from "@/lib/utils";
 interface optionDish {
   title: string;
-  source: string;
-  price: number;
+  source?: string;
+  price?: number;
   type: string;
+  description?: string;
+  options?: optionDish[];
 }
 type Props = {
   option: {
     title: string;
     options: optionDish[];
+    description?: string;
   };
 };
 const MenuItemImageModal = ({ option }: Props) => {
   const [open, setOpen] = useState(false);
   const optionSourceLeangth = option.options.filter(
-    (i) => i.source !== ""
+    (i) => i.source && i.source !== ""
   ).length;
   const optionFilter = option.options
-    .filter((i) => i.source !== "")
+    .filter((i) => i.source && i.source !== "")
     .map((o) => ({
       ...o,
       image: `https://d13e9bff825cyt.cloudfront.net${o.source}`,
@@ -79,14 +82,13 @@ const MenuItemImageModal = ({ option }: Props) => {
                 <p className="flex items-center justify-between mb-3 md:mb-2 rounded-b-lg bg-amber-300 text-black p-2 text-xs font-semibold">
                   <span>
                     {item.type}. {item.title}: <span>£</span>
-                    {item.price}
+                    {item.price || 0}
                   </span>
                 </p>
               </div>
             ))}
-            {option.options.filter((i) => i.source !== "").length === 0 && (
-              <>Comming soon.</>
-            )}
+            {option.options.filter((i) => i.source && i.source !== "")
+              .length === 0 && <>Comming soon.</>}
           </div>
         </ScrollArea>
       </DialogContent>
