@@ -247,6 +247,17 @@ const MenuPage = () => {
             ))}
           </div>
         </div>
+        
+        {/* Allergy Warning Section */}
+        <div className="col-span-12 mt-8 mb-12 text-center bg-red-950/20 border border-red-500/30 rounded-lg p-6 mx-5">
+          <h3 className="text-xl font-bold text-red-400 mb-4">
+            ALLERGY INFORMATION!
+          </h3>
+          <p className="text-lg max-w-2xl mx-auto font-semibold text-red-300">
+            IF YOU HAVE A FOOD ALLERGY PLEASE INFORM A MEMBER OF OUR STAFF BEFORE YOU PLACE ORDER
+          </p>
+        </div>
+        
         {showButton && (
           <button
             onClick={scrollToTop}

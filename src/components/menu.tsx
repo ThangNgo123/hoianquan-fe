@@ -223,14 +223,14 @@ const Menu = () => {
         </Tabs>
 
         <div className="mt-12 text-center">
-          <h3 className="text-xl font-bold text-amber-300 mb-4">
-            Allergy Information
+          <h3 className="text-xl font-bold text-red-400 mb-4">
+            ALLERGY INFORMATION!
           </h3>
-          <p className="text-lg max-w-2xl mx-auto mb-6">
-            If you have a food allergy please inform a member of our staff
-            before you place order
+          <p className="text-lg max-w-2xl mx-auto mb-6 font-semibold text-red-300">
+            IF YOU HAVE A FOOD ALLERGY PLEASE INFORM A MEMBER OF OUR STAFF
+            BEFORE YOU PLACE ORDER
           </p>
-          <Button
+          {/* <Button
             className="bg-amber-300 text-black hover:bg-amber-400 cursor-pointer"
             onClick={() => {
               const files = ["/menu-1.jpg", "/menu-2.jpg"];
@@ -246,7 +246,7 @@ const Menu = () => {
             }}
           >
             Download Full Menu
-          </Button>
+          </Button> */}
         </div>
       </div>
     </section>
