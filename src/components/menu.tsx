@@ -130,7 +130,7 @@ const Menu = () => {
         </div>
 
         <Tabs defaultValue="starters" className="w-full">
-          <TabsList className="grid grid-cols-2 md:grid-cols-4 md:bg-amber-950/50 md:mb-8 mb-15 mx-auto">
+          <TabsList className="grid grid-cols-2 md:grid-cols-3 md:bg-amber-950/50 md:mb-8 mb-15 mx-auto">
             <TabsTrigger
               value="starters"
               className="data-[state=active]:bg-amber-300 data-[state=active]:text-black"
@@ -143,12 +143,14 @@ const Menu = () => {
             >
               Mains
             </TabsTrigger>
+            {/* Temporarily hidden - Sushi menu
             <TabsTrigger
               value="sushi"
               className="data-[state=active]:bg-amber-300 data-[state=active]:text-black"
             >
               Sushi
             </TabsTrigger>
+            */}
             <TabsTrigger
               value="desserts"
               className="data-[state=active]:bg-amber-300 data-[state=active]:text-black"
@@ -205,6 +207,7 @@ const Menu = () => {
             </div>
           </TabsContent>
 
+          {/* Temporarily hidden - Sushi menu content
           <TabsContent value="sushi" className="space-y-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {menu.sushi.slice(0, 4).map(renderMenuItem)}
@@ -220,6 +223,7 @@ const Menu = () => {
               </Button>
             </div>
           </TabsContent>
+          */}
         </Tabs>
 
         <div className="mt-12 text-center">

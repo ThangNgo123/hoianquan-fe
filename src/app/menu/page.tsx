@@ -43,7 +43,8 @@ const MenuPage = () => {
             {[
               { title: "Starters & Sides", key: "startersAndSides" },
               { title: "Mains", key: "mains" },
-              { title: "Sushi", key: "sushi" },
+              // Temporarily hidden - Sushi menu
+              // { title: "Sushi", key: "sushi" },
               { title: "Desserts", key: "desserts" },
             ].map(({ title, key }) => (
               <div key={key}>
@@ -86,7 +87,8 @@ const MenuPage = () => {
             {[
               { title: "Starters & Sides", key: "startersAndSides" },
               { title: "Mains", key: "mains" },
-              { title: "Sushi", key: "sushi" },
+              // Temporarily hidden - Sushi menu
+              // { title: "Sushi", key: "sushi" },
               { title: "Desserts", key: "desserts" },
             ].map(({ title, key }) => (
               <div className="mb-10" key={key}>
